@@ -90,7 +90,7 @@ header {
 #bottom-right-logo {
 	width: 25vw;
 	position: absolute;
-	top: 37vh;
+	top: 25vw;
 	right: 18vw;
 	z-index: -2;
 }
@@ -117,10 +117,10 @@ header {
 
 #home-pic-collage {
 	position: absolute;
-	width: 40vw;
+	width: 20vw;
 	height: 30vw;
 	padding: 2vw 0;
-	
+	right: 20vw;	
 }
 
 #home-pic-collage img {
@@ -134,8 +134,7 @@ header {
 	border: solid white;
 	border-width: 2px;
 	position: absolute;
-  top: 8vw;
-  z-index: 51;
+  top: 6vw;
 	border-radius: 20px;
 	overflow: hidden;
 	height: 10vw;
@@ -168,7 +167,6 @@ header {
 	width: 90%;
 	transition: width 0.5s;
 	background: black;
-	border: none;
 	color: white;
 	border: solid white;
 }
