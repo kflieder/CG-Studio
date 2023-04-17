@@ -1,13 +1,8 @@
-$('.image-slider').slick({
 
-   dots: true,
-   infinite: true,
-   speed: 300,
-   slidesToShow: 3,
-   centerMode: true,
-   variableWidth: true
 
-});
+// HOME PAGE
+
+
 let video1 = document.getElementById('front-desk-video');
 
 video1.addEventListener('mouseover', function() {
@@ -25,10 +20,6 @@ const homePageImgContainters = Array.from(document.querySelectorAll('.img-contai
 const homeIndex = 1;
 const homeValue = homePageImgContainters[homeIndex]
 
-
-
-
-console.log(homeValue)
 
 function moveImgContainers(element, transformValue = 'none') {
    element.style.transition = "all 0.5s ease-in-out";
@@ -94,6 +85,27 @@ function hidePicIconsMouseout() {
    moveImgContainers(homePageImgContainters[4], 'translate(0, 0)');
    changeBtnWidths('open-close', '90%')
    changeBtnWidths('close-btn', '10%')
+
+
+
+
+// pictures
+
+$('.image-slider').slick({
+
+   dots: true,
+   infinite: true,
+   speed: 300,
+   slidesToShow: 3,
+   centerMode: true,
+   variableWidth: true
+
+});
+
+
+
+
+
 }
 function showPicIconsMouseover() {
    moveImgContainers(homePageImgContainters[0], 'translate(20px, 20px)');
@@ -130,6 +142,28 @@ homePageCollageBtn.addEventListener('click', function() {
    expandImgIcons()
    activeImgContainer()
 })
+
+
+// *****PRODUCTS*****
+
+
+// const homePageImgContainters = Array.from(document.querySelectorAll('.img-container'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
