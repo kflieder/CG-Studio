@@ -274,11 +274,16 @@ header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	overflow: scroll;
-	
+	box-shadow: 30px 30px 30px;
 }
+
 
 .active-items h3 {
 	font-size: 2vw;
+}
+
+.inactive-items {
+	display: none;
 }
 
 
