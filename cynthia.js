@@ -144,13 +144,6 @@ homePageCollageBtn.addEventListener('click', function() {
 })
 
 
-// *****PRODUCTS*****
-
-
-// const homePageImgContainters = Array.from(document.querySelectorAll('.img-container'))
-
-
-
 
 
 

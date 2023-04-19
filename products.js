@@ -2,10 +2,11 @@ const topProdCards = Array.from(document.querySelectorAll('.prod-card-top'));
 
 let topProdCardsIndex = 2;
 let topProdCardsValue = topProdCards[topProdCardsIndex];
+const activeItems = Array.from(document.querySelectorAll('.item-displays'));
+const prodNavBar = Array.from(document.querySelectorAll('.prod-nav-bar'));
 
 
-
-
+console.log(topProdCards.length)
 
 function expandProduct() {
 	const cards = topProdCards;
@@ -14,7 +15,7 @@ function expandProduct() {
 	cards.forEach((card) => {
 		card.addEventListener('click', () => {
 			popUp.classList.add('active-products');
-			
+			addActiveClassToItemDisplays(activeItems[0], 'active-items');
 			
 		})
 	})
@@ -24,7 +25,7 @@ function expandProduct() {
 		popUp.classList.remove('active-products');
 	})
 	
-	
+	prodNavBarLinks()
 }
 
 
@@ -38,34 +39,37 @@ function topCardLink() {
 	activeDisplay = card;
 }
 
-// if "" index clicked open "" index
+
 
 function prodNavBarLinks() {
-	const prodNavBar = Array.from(document.querySelectorAll('.prod-nav-bar'));
-	let prodNavBarIndex = 1;
-	let prodNavBarvalue = prodNavBar[prodNavBarIndex];
-	const links = prodNavBar;
-	let activeLink = null;
-	let display = activeItems;
-	links.forEach((link) => {
-		link.addEventListener('click', () => {
-			
+    const links = prodNavBar;
 
-		})
-	})
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            switch (link) {
+		 	case prodNavBar[0]:
+		 	addActiveClassToItemDisplays(activeItems[0], 'active-items');
+		 	break;	
+		 case prodNavBar[1]:
+		 	activeItems[0].classList.add('inactive-items');
+		 	addActiveClassToItemDisplays(activeItems[1], 'active-items');
+		 	break;
+		 case prodNavBar[2]:
+		 	activeItems[0, 1].classList.add('inactive-items');
+		 	addActiveClassToItemDisplays(activeItems[2], 'active-items');
+
+		}
+           
+        });
+    });
 }
 
-function addActiveClassToItemDisplays() {
-	const activeItems = Array.from(document.querySelectorAll('.item-displays'));
-	let activeItemsIndex = 1;
-	let activeItemsValue = activeItems[activeItemsIndex];
-	// i variable
-	activeItems[1].classList.remove('active-items');
-	activeItems[1].classList.add('inactive-items');
-	activeItems[2].classList.add('active-items');
-	activeItems[2].classList.remove('inactive-items');
 
-}
+function addActiveClassToItemDisplays(element, className) {
+		element.classList.remove('inactive-items');
+		element.classList.add(className);
+	}
 
-addActiveClassToItemDisplays()
+
+
 expandProduct()
