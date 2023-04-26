@@ -6,62 +6,57 @@ const activeItems = Array.from(document.querySelectorAll('.item-displays'));
 const prodNavBar = Array.from(document.querySelectorAll('.prod-nav-bar'));
 
 
-console.log(topProdCards.length)
+ 
+
+
+
 
 function expandProduct() {
 	const cards = topProdCards;
+	const openProdFromCard = activeItems;
 	let popUp = document.querySelector('.prod-expanded');
-
-	cards.forEach((card) => {
-		card.addEventListener('click', () => {
-			popUp.classList.add('active-products');
-			addActiveClassToItemDisplays(activeItems[0], 'active-items');
-			
-		})
-	})
-
-	const closeActive = document.getElementById('close');
-	closeActive.addEventListener('click', () => {
-		popUp.classList.remove('active-products');
-	})
+	const mainProd = document.getElementById('main-prod');
 	
+	for (let i = 0; i < cards.length; i++) {
+		cards[i].addEventListener('click', function() {
+			for (let j = 0; j < openProdFromCard.length; j++) {
+				popUp.classList.add('active-products'); 
+				openProdFromCard[j].style.display = 'none';
+			}
+
+			openProdFromCard[i].style.display = 'grid';
+			popUp.scrollIntoView({behavior: 'smooth'});
+			document.body.style.overflow = 'hidden';
+
+		})
+	}
+
+
+	closeButtonOnProdDisplay(popUp)
 	prodNavBarLinks()
 }
 
 
-function topCardLink() {
-	let activeDisplay = activeItems;
-	let activeCard = null;
-	if (activeCard) {
-		activeCard.classList.remove('active-items');
-	} 
-	activeItems[1].classList.add('active-items');
-	activeDisplay = card;
+function closeButtonOnProdDisplay(closeThis) {
+		const closeActive = document.getElementById('close');
+		closeActive.addEventListener('click', () => {
+		closeThis.classList.remove('active-products');
+		document.body.style.overflow = 'scroll'
+	})
 }
-
 
 
 function prodNavBarLinks() {
     const links = prodNavBar;
 
-    links.forEach((link) => {
-        link.addEventListener('click', () => {
-            switch (link) {
-		 	case prodNavBar[0]:
-		 	addActiveClassToItemDisplays(activeItems[0], 'active-items');
-		 	break;	
-		 case prodNavBar[1]:
-		 	activeItems[0].classList.add('inactive-items');
-		 	addActiveClassToItemDisplays(activeItems[1], 'active-items');
-		 	break;
-		 case prodNavBar[2]:
-		 	activeItems[0, 1].classList.add('inactive-items');
-		 	addActiveClassToItemDisplays(activeItems[2], 'active-items');
-
-		}
-           
-        });
-    });
+    for (let i = 0; i < links.length; i++) {
+    	links[i].addEventListener('click', function() {
+    		for (let j = 0; j < activeItems.length; j++) {
+    			activeItems[j].style.display = 'none';
+    		}
+    		activeItems[i].style.display = 'grid';
+    	})
+    }
 }
 
 

@@ -5,13 +5,23 @@
 
 let video1 = document.getElementById('front-desk-video');
 
-video1.addEventListener('mouseover', function() {
-  video1.play();
-});
+// video1.addEventListener('mouseover', function() {
+//   video1.play();
+// });
 
-video1.addEventListener('mouseout', function() {
-  video1.pause();
-});
+// video1.addEventListener('mouseout', function() {
+//   video1.pause();
+// });
+
+
+
+
+
+
+
+
+
+
 
 
 const homePageCollageBtn = document.getElementById('open-close');
@@ -70,78 +80,78 @@ function activeImgContainer() {
 
 
 
-let mouseoutEnabled = false
+// let mouseoutEnabled = false
 
-window.addEventListener('load', function() {
-   mouseoutToggle();
-});
-
-
-function hidePicIconsMouseout() {
-   moveImgContainers(homePageImgContainters[0], 'translate(0, 0)');
-   moveImgContainers(homePageImgContainters[1], 'translate(0, 0)');
-   moveImgContainers(homePageImgContainters[2], 'translate(0, 0)');
-   moveImgContainers(homePageImgContainters[3], 'translate(0, 0)');
-   moveImgContainers(homePageImgContainters[4], 'translate(0, 0)');
-   changeBtnWidths('open-close', '90%')
-   changeBtnWidths('close-btn', '10%')
+// window.addEventListener('load', function() {
+//    mouseoutToggle();
+// });
 
 
-
-
-// pictures
-
-$('.image-slider').slick({
-
-   dots: true,
-   infinite: true,
-   speed: 300,
-   slidesToShow: 3,
-   centerMode: true,
-   variableWidth: true
-
-});
+// function hidePicIconsMouseout() {
+//    moveImgContainers(homePageImgContainters[0], 'translate(0, 0)');
+//    moveImgContainers(homePageImgContainters[1], 'translate(0, 0)');
+//    moveImgContainers(homePageImgContainters[2], 'translate(0, 0)');
+//    moveImgContainers(homePageImgContainters[3], 'translate(0, 0)');
+//    moveImgContainers(homePageImgContainters[4], 'translate(0, 0)');
+//    changeBtnWidths('open-close', '90%')
+//    changeBtnWidths('close-btn', '10%')
 
 
 
 
+// // pictures
 
-}
-function showPicIconsMouseover() {
-   moveImgContainers(homePageImgContainters[0], 'translate(20px, 20px)');
-   moveImgContainers(homePageImgContainters[1], 'translate(40px, 40px)');
-   moveImgContainers(homePageImgContainters[2], 'translate(60px, 60px)');
-   moveImgContainers(homePageImgContainters[3], 'translate(80px, 80px)');
-   moveImgContainers(homePageImgContainters[4], 'translate(100px, 100px)');
-   changeBtnWidths('open-close', '80%');
-   changeBtnWidths('close-btn', '20%')
+// $('.image-slider').slick({
 
-}
-function expandImgIcons() {
-   moveImgContainers(homePageImgContainters[0], 'translate(0, -2vw)');
-   moveImgContainers(homePageImgContainters[1], 'translate(12vw, 2vw)');
-   moveImgContainers(homePageImgContainters[2], 'translate(0, 10vw)');
-   moveImgContainers(homePageImgContainters[3], 'translate(12vw, 14vw)');
-   moveImgContainers(homePageImgContainters[4], 'translate(0, 22vw)');
-}
+//    dots: true,
+//    infinite: true,
+//    speed: 300,
+//    slidesToShow: 3,
+//    centerMode: true,
+//    variableWidth: true
 
-function mouseoutToggle() {
-   mouseoutEnabled = !mouseoutEnabled;
-   if (mouseoutEnabled) {
-      homePageCollageBtn.addEventListener('mouseover', showPicIconsMouseover);
-      homePageCollageBtn.addEventListener('mouseout', hidePicIconsMouseout);   
+// });
+
+
+
+
+
+// }
+// function showPicIconsMouseover() {
+//    moveImgContainers(homePageImgContainters[0], 'translate(20px, 20px)');
+//    moveImgContainers(homePageImgContainters[1], 'translate(40px, 40px)');
+//    moveImgContainers(homePageImgContainters[2], 'translate(60px, 60px)');
+//    moveImgContainers(homePageImgContainters[3], 'translate(80px, 80px)');
+//    moveImgContainers(homePageImgContainters[4], 'translate(100px, 100px)');
+//    changeBtnWidths('open-close', '80%');
+//    changeBtnWidths('close-btn', '20%')
+
+// }
+// function expandImgIcons() {
+//    moveImgContainers(homePageImgContainters[0], 'translate(0, -2vw)');
+//    moveImgContainers(homePageImgContainters[1], 'translate(12vw, 2vw)');
+//    moveImgContainers(homePageImgContainters[2], 'translate(0, 10vw)');
+//    moveImgContainers(homePageImgContainters[3], 'translate(12vw, 14vw)');
+//    moveImgContainers(homePageImgContainters[4], 'translate(0, 22vw)');
+// }
+
+// function mouseoutToggle() {
+//    mouseoutEnabled = !mouseoutEnabled;
+//    if (mouseoutEnabled) {
+//       homePageCollageBtn.addEventListener('mouseover', showPicIconsMouseover);
+//       homePageCollageBtn.addEventListener('mouseout', hidePicIconsMouseout);   
       
-   } else {
-      homePageCollageBtn.removeEventListener('mouseout', hidePicIconsMouseout);
-      homePageCollageBtn.removeEventListener('mouseover', showPicIconsMouseover);
-   }  
-}
+//    } else {
+//       homePageCollageBtn.removeEventListener('mouseout', hidePicIconsMouseout);
+//       homePageCollageBtn.removeEventListener('mouseover', showPicIconsMouseover);
+//    }  
+// }
 
-homePageCollageBtn.addEventListener('click', function() {
-   mouseoutToggle()
-   expandImgIcons()
-   activeImgContainer()
-})
+// homePageCollageBtn.addEventListener('click', function() {
+//    mouseoutToggle()
+//    expandImgIcons()
+//    activeImgContainer()
+// })
 
 
 
