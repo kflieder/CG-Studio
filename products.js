@@ -4,9 +4,7 @@ let topProdCardsIndex = 2;
 let topProdCardsValue = topProdCards[topProdCardsIndex];
 const activeItems = Array.from(document.querySelectorAll('.item-displays'));
 const prodNavBar = Array.from(document.querySelectorAll('.prod-nav-bar'));
-
-
- 
+let activeLink = null;
 
 
 
@@ -27,7 +25,7 @@ function expandProduct() {
 			openProdFromCard[i].style.display = 'grid';
 			popUp.scrollIntoView({behavior: 'smooth'});
 			document.body.style.overflow = 'hidden';
-
+			
 		})
 	}
 
@@ -46,24 +44,31 @@ function closeButtonOnProdDisplay(closeThis) {
 }
 
 
+
+
 function prodNavBarLinks() {
     const links = prodNavBar;
 
     for (let i = 0; i < links.length; i++) {
-    	links[i].addEventListener('click', function() {
-    		for (let j = 0; j < activeItems.length; j++) {
-    			activeItems[j].style.display = 'none';
-    		}
-    		activeItems[i].style.display = 'grid';
-    	})
+        links[i].addEventListener('click', function() {
+            for (let j = 0; j < activeItems.length; j++) {
+                activeItems[j].style.display = 'none';
+
+            }
+            activeItems[i].style.display = 'grid';
+            prodNavBarActivateLink(links[i]);
+        })
     }
 }
 
+function prodNavBarActivateLink(activateThis) {
+    if (activeLink) {
+        activeLink.classList.remove('active-prod-link');
+    } 
+    activateThis.classList.add('active-prod-link');
+    activeLink = activateThis;
+}
 
-function addActiveClassToItemDisplays(element, className) {
-		element.classList.remove('inactive-items');
-		element.classList.add(className);
-	}
 
 
 

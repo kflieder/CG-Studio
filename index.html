@@ -8,8 +8,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	<script src="https://kit.fontawesome.com/fc6e120796.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,13 +17,11 @@
 			<img style="height: 5vw" src="images/words-logo.jpeg">
 		</div>
 	
-			<h1>WhatsApp Link</h1>
-		
-		
+			<h1><a href="">Book an appointment</a></h1>
 	</header>
-	  		<nav>
+	 <nav>
 	    <ul>
-	        <li><a href="#">Home</a></li><!--
+	        <li><a class="active-link" href="#">Home</a></li><!--
 	     --><li><a href="products.html">Products</a></li><!--
 	     --><li><a href="#">About me</a></li><!--
 	     --><li><a href="gallery.html">Pictures</a></li>
@@ -34,72 +30,20 @@
 	<div id="main">
 		<div class="video-container">
 			<video class="video-element" id="entrance-video" src="images/entrance.mp4" autoplay muted></video>	
-			<video class="video-element" id="chair-video" src="images/chair.mp4" autoplay muted></video>
+			<video class="video-element" id="chair-video" src="images/chair.mp4" muted></video>
 		
-			<video class="video-element" id="front-desk-video" src="images/desk2.mp4" autoplay muted></video>
+			<video class="video-element" id="front-desk-video" src="images/desk2.mp4" muted></video>
 		</div>
-		
-		
-
-
-
-
-<!-- 	  	<div id="home-pic-collage">
-	  		<div id="img-btns">
-	  			<button id="open-close"><i class="fa-solid fa-chevron-down"></i></button>
-	  			<button id="close-btn"></button>
-	  		</div>
-	  		
-
-
-	  		<div class="img-container" id="img-cont-1">
-	  			<img class="collage-pic" src="images/front1.jpeg">
-	  		</div>
-	  		<div class="img-container" id="img-cont-2">
-	  			<img class="collage-pic" src="images/chairs.jpeg">
-	  		</div>
-	  		<div class="img-container" id="img-cont-3">
-	  			<img class="collage-pic" src="images/front2.jpeg">
-	  		</div>
-	  		<div class="img-container" id="img-cont-4">
-	  			<img class="collage-pic" src="images/desk.jpeg">
-	  		</div>
-	  		<div class="img-container" id="img-cont-5">
-	  			<img class="collage-pic" src="images/front3.jpeg">
-	  		</div>
-	</div> -->
-	  		
-	
-
-
-
-
 
 		</div>
-		
-			<!-- <div>
-	  			<img id="bottom-right-logo" src="images/circle-logo.jpeg">
-	  		</div> -->
-
-
-		
-	
-
-
-
-
 	</div>
-
-
-	
-
-	
-
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script src="cynthia.js"></script>
 
+	<script src="cynthia.js"></script>
+	<script>
+		loopVideos()
+	</script>
 	
 </body>
 </html>
