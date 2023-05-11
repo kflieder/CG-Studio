@@ -313,31 +313,31 @@ nav ul li a:hover {
 
 @media screen and (max-width: 675px) {
 	body {
-		display: grid;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
 	}
 	header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  outline: solid hotpink;
+  margin: 0;
+ 	padding: 2vw;
+  
+ 
+  
 		}
 
 #cg-logo {
-  width: 10vw;
+  width: 20vw;
+  border-radius: 15px;
 }
 
 #name-logo {
-  display: hidden;
+ position: absolute;
+ display: none; 
 }
 
 	nav {
-  display: flex;
-  justify-content: center;
-  position: absolute;
   margin: 0;
   width: 100%;
-  outline: solid blue;
 		}
 
 	a {
@@ -346,15 +346,11 @@ nav ul li a:hover {
 		}
 
 nav ul {
-  list-style: none;
-  outline: solid orange;
-  display: flex;
-  flex-direction: row;
+	list-style: none;
 				}
 
 nav ul li a {
-
-  font-size: 3vw;
+  font-size: 8vw;
   opacity: 0.5;
   border-bottom: solid transparent;
   transition: opacity 1s, border 1s;
@@ -369,9 +365,11 @@ nav ul li a:hover {
 
 	#main {
 		position: absolute;
-		outline: solid green;
+	
 		overflow: hidden;
-		width: 100vw;
+		width: 100%;
+		height: 100%;
+		z-index: -4;
 	}
 	
 	.video-container {
