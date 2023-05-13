@@ -56,7 +56,12 @@ nav ul li a:hover {
   opacity: 1;
   border-bottom: solid white;
 }
-
+ audio {
+ 	position: absolute;
+ 	top: 90%;
+ 	left: 80%;
+ 	width: 20vw;
+ }
 
 #main {
   grid-row: 2;
@@ -161,6 +166,23 @@ nav ul li a:hover {
 	width: 30vw;
 }
 
+#skin-card-div {
+	text-align: center;
+}
+
+#skin {
+	padding-left: 2vw;
+	margin-left: 4vw;
+	font-size: 4vw;
+	border-bottom: solid white;
+	letter-spacing: 3vw;
+	width: 20vw;
+}
+
+
+#avyna {
+
+}
 
 
 /*pop-up div*/
@@ -207,9 +229,10 @@ nav ul li a:hover {
 
 #close {
 	position: absolute;
-	top: 3vw;
-	left: 95%;
-	
+	top: 0;
+	left: 96.5%;
+	color: white;
+	font-size: 4vw;
 }
 
 .prod-expanded {
@@ -264,28 +287,52 @@ nav ul li a:hover {
 
 .active-items h3 {
 	font-size: 2vw;
+	margin: 0;
 }
 
 .inactive-items {
 	
 }
 
+.item-card > * {
+/*	outline: solid pink;*/
+}
 
 .item-card {
+	display: grid;
+	grid-template-columns: 2fr 4fr;
 	border: solid white;
-	box-shadow: 0 0 30px, inset 30px 0 30px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 30px, inset 50px 0 50px rgba(0, 0, 0, 0.5);
 	width: 40vw;
-	
-}
+
+	}
 
 .item-card img {
-	
-	float: left;
+		align-self: center;
+		margin-left: 2vw;
 }
 
+.item-card h3 p {
+	outline: solid green;
+}
+
+.text-inside-item-card {
+	border-width: 1px;
+	margin: 2vw;
+	margin-left: 0;
+	}
 
 
+#hair-color-pics {
+	display: inline-flex;
+	flex-wrap: wrap;
 
+}
+
+#hair-color-pics img {
+	margin: 1vw;
+	border-radius: 40px;
+}
 
 /*PICS*/
 
