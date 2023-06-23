@@ -112,7 +112,7 @@ nav ul li a:hover {
 	justify-content: space-around;
 	grid-row: 2;
 	overflow: scroll;
-	height: 50vw;
+	height: 80vh;
 	padding-left: 2vw;
 }
 
@@ -303,8 +303,6 @@ nav ul li a:hover {
 	grid-template-columns: 2fr 4fr;
 	border: solid white;
 	box-shadow: 0 0 30px, inset 50px 0 50px rgba(0, 0, 0, 0.5);
-	width: 40vw;
-
 	}
 
 .item-card img {
@@ -344,7 +342,7 @@ nav ul li a:hover {
 	column-gap: 2vw;
 	grid-row: 2;
 	overflow: scroll;
-	height: 50vw;
+	height: 80vh;
 }
 
 #gallery-main > * {
@@ -357,30 +355,49 @@ nav ul li a:hover {
 	width: 20vw;
 }
 
-
 @media screen and (max-width: 675px) {
+	#product-card-div {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+		padding-left: 2vw;
+	}
+	#gallery-main{
+	grid-template-columns: repeat(2, 2fr);
+}
+	.prod-expanded li {
+	margin: 1vw;
+}
+	.active-products {
+		margin-top: 15vh;
+		height: 70vh;
+	}
+
+	.item-displays {
+		grid-template-columns: 1fr;
+	}
+
 	body {
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
+		grid-template-columns: 6fr 1fr;
+		font-size: 3vw;
 	}
 	header {
-  margin: 0;
+  	margin: 0;
  	padding: 2vw;
-  
- 
-  
-		}
+  	}
 
-#cg-logo {
-  width: 20vw;
+	#name-logo {
   border-radius: 15px;
-}
+	}
 
-#name-logo {
+	#cg-logo {
  position: absolute;
  display: none; 
-}
+	}
 
 	nav {
   margin: 0;
@@ -397,7 +414,7 @@ nav ul {
 				}
 
 nav ul li a {
-  font-size: 8vw;
+  font-size: 6vw;
   opacity: 0.5;
   border-bottom: solid transparent;
   transition: opacity 1s, border 1s;
@@ -436,6 +453,207 @@ nav ul li a:hover {
   	width: 100%;
 	}
 }
+
+/*about me section*/
+* {
+	
+}
+
+#about-me-body {
+	padding: 0;
+	background-color: black;
+  	color: black;
+  	display: grid;
+  	grid-template-columns: 95% 5%;
+  	font-family: 'inter', sans-serif;
+  	overflow-x: hidden;
+}
+
+#about-me {
+	display: flex;
+	flex-direction: column;
+	grid-row: 2;
+	overflow: scroll;
+	height: 80vh;
+	position: relative;
+	background-image: url(historyPics/background.jpeg);
+	background-size: cover;
+}
+ .about-me-images-border {
+	border: solid white;
+	border-width: 1em;
+	outline: solid black;
+ }
+.about-me-text-border {
+	border: solid black;
+	outline: solid white;
+	border-width: 10px;
+	padding: 2vw;
+	box-shadow: 0 0 30px;
+	background-color: white;
+}
+
+#aboutme-header {
+	position: relative;
+	z-index: 10;
+	box-shadow: 0 0 5vw 2vw rgba(0, 0, 0, 0.8);
+}
+
+.collapsed-nav {
+	display: inline-block;
+	color: white;
+	text-align: right;
+	box-shadow: 0 0 6vw 2vw rgba(0, 0, 0, 0.8);
+	position: relative;
+	z-index: 9;
+}
+
+.collapsed-nav li {
+	color: white;
+	list-style: none;
+}
+
+.collapsed-nav li a {
+	font-size: 3vw;
+	color: white;
+}
+
+#about-me-div-0 {
+	display: inline-flex;
+	justify-content: center;
+}
+#about-me-img-1 {
+	margin-top: 2vw;
+	height: 40vw;
+	width: 70vw;
+	filter: grayscale(60%);
+	border: solid black;
+	outline: solid white;
+	border-width: 1vw;
+}
+
+#center-text {
+	border: solid black;
+	border-width: 0.5vw;
+	position: absolute;
+	z-index: 2;
+	top: 20vw;
+	left: 30vw;
+	text-align: center;
+	color: white;
+	font-size: 6vw;
+	letter-spacing: 5px;
+	background-color: rgba(0, 0, 0, 0.466);
+	width: 35vw;
+	
+}
+
+
+#about-me-img-2 {
+	width: 100%;
+	height: 35vw;
+	object-fit: cover;
+	object-position: bottom;
+	filter: grayscale(90%);
+	grid-row: 1;
+	grid-column: 2;
+}
+
+#about-me-div-1 h1 {
+	border: solid black;
+	outline: solid white;
+	border-width: 10px;
+	padding: 2vw;
+	margin-left: 5vw;
+	position: relative;
+	z-index: 10;
+	width: 25vw;
+	background-color: white;
+}
+
+#about-me-img-30 {
+	border: solid white;
+	border-width: 1vw;
+	width: 20vw;
+	height: auto;
+	aspect-ratio: 1;
+	transform: rotate(45deg);
+	margin: 10vw;
+	margin-left: 8vw;
+	outline: solid black;
+}
+
+#about-me-div-1 {
+	justify-content: space-around;
+	align-items: center;
+	
+	width: 100%;
+	display: inline-flex;
+	
+}
+
+#about-me-div-2 {
+	
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#about-me-div-2 h3 {
+	border: solid black;
+	width: 20vw;
+	height: 7vw;
+}
+
+#about-me-img-3 {
+	
+}
+
+#about-me-div-2 img {
+	width: 20vw;
+	
+}
+
+#about-me-div-3 {
+	outline: solid purple;
+	width: 20vw;
+}
+
+#about-me-div-3 img {
+	width: 20vw;
+}
+
+
+#about-me-div-4 {
+	outline: solid orange;
+	width: 20vw;
+}
+
+#about-me-div-4 img {
+	width: 20vw;
+}
+
+#about-me-div-5 {
+	outline: solid yellow;
+	width: 20vw;
+}
+
+#about-me-div-5 img {
+	width: 20vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
