@@ -1,6 +1,11 @@
 
 
-
+window.addEventListener('DOMContentLoaded', (event) => {
+   const audio = document.getElementById('tuktuk');
+ 
+  
+   audio.play();
+ });
 
 
 function loopVideos() {
