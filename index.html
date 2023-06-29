@@ -19,7 +19,12 @@
 	
 			<h1><a aria-label="Chat on WhatsApp" href="https://wa.me/529996619999"><img src="images/WhatsAppButton.svg"></a></h1>
 	</header>
-		
+
+		<div id="welcome">
+			<h1>Bienvenido!</h1>
+			<button id="play-btn-el">Con Música</button>
+			<button id="no-music-btn-el">Sin Música</button>
+		</div>
 		 <nav>
 		    <ul>
 		        <li><a class="active-link" href="#">Inicio</a></li>
@@ -29,7 +34,7 @@
 			 	<!-- <li><a href="miHistoria.html">Mi Historia</a></li> -->
 		    </ul>
 		</nav>
-		 <audio  id="tuktuk" controls autoplay>
+		 <audio  id="tuktuk" controls>
 		  		<source src="tuktuk.mp3" type="audio/mpeg">
 		  		Your browser does not support the audio element.
 		  </audio>
@@ -49,6 +54,7 @@
 
 	<script src="cynthia.js"></script>
 	<script>
+		 welcomePopup()
 		loopVideos()
 	</script>
 	

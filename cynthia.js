@@ -1,11 +1,21 @@
 
-
-window.addEventListener('DOMContentLoaded', (event) => {
-   const audio = document.getElementById('tuktuk');
  
-  
-   audio.play();
- });
+
+function welcomePopup() {
+   const audio = document.getElementById('tuktuk');
+   const enterBtn = document.getElementById('play-btn-el');
+   const welcomeDiv = document.getElementById('welcome');
+   const noMusic = document.getElementById('no-music-btn-el');
+
+   noMusic.addEventListener('click', function() {
+      welcomeDiv.style.display = 'none';
+   })
+
+   enterBtn.addEventListener('click', function() {
+      welcomeDiv.style.display = 'none';
+      audio.play();
+   })
+}
 
 
 function loopVideos() {

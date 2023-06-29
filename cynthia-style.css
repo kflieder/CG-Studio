@@ -8,6 +8,38 @@ body {
   font-family: 'inter', sans-serif;
 }
 
+#welcome {
+	position: absolute;
+	text-align: center;
+	z-index: 1000;
+	top: 50%;
+	left: 25%;
+	display: block;
+	background-color: black;
+	width: 40vw;
+	border: solid white;
+}
+
+#play-btn-el {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 2vw;
+	width: 10vw;
+	height: 3vw;
+	font-size: 1.3vw;
+}
+#no-music-btn-el {
+	background-color: white;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 2vw;
+	width: 10vw;
+	height: 3vw;
+	font-size: 1.3vw;
+
+}
+
 #cg-logo {
   width: 6vw;
 }
@@ -356,6 +388,38 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 675px) {
+
+	#welcome {
+		position: absolute;
+		text-align: center;
+		z-index: 1000;
+		top: 30%;
+		left: 20%;
+		display: block;
+		background-color: black;
+		width: 40vw;
+		border: solid white;
+	}
+	
+	#play-btn-el {
+		background-color: white;
+		border: none;
+		cursor: pointer;
+		margin-bottom: 2vw;
+		width: 35vw;
+		height: 3vw;
+		font-size: 1.3vw;
+	}
+	#no-music-btn-el {
+		background-color: white;
+		border: none;
+		cursor: pointer;
+		margin-bottom: 2vw;
+		width: 35vw;
+		height: 3vw;
+		font-size: 1.6vw;
+	
+	}
 	#product-card-div {
 		position: relative;
 		display: flex;
@@ -391,12 +455,14 @@ nav ul li a:hover {
   	}
 
 	#name-logo {
-  border-radius: 15px;
+  	border-radius: 5px;
+	background-color: black;
+	
 	}
 
 	#cg-logo {
- position: absolute;
- display: none; 
+ 	position: absolute;
+ 	display: none; 
 	}
 
 	nav {
